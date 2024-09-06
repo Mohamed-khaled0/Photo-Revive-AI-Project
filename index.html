@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@200;300;400;500;600;700;800&amp;display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Page Title and Description -->
+    <title>PhotoRevive AI-Powered Old Photo Restoration Online</title>
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <meta name="description" content="Effortlessly restore old photos with PhotoRevive's AI-powered tool - rejuvenate your cherished memories with just a few clicks!" />
+</head>
+
+<body class="font-sans bg-gray-50 text-gray-900">
+
+<!-- Header -->
+<header class="bg-white py-4 shadow-2xl fade-in dark:bg-gray-900 dark:text-white transition duration-300">
+    <div class="container mx-auto flex justify-between items-center px-6">
+        <!-- Logo -->
+        <h1 class="text-3xl font-bold">Photo<span class="text-fuchsia-800 dark:text-fuchsia-500">Revive</span></h1>
+
+   
+        <!-- Burger Menu for Mobile -->
+        <button id="burger-menu" class="md:hidden flex items-center px-3 py-2 border rounded text-gray-900 border-gray-900 dark:text-gray-100 dark:border-gray-100">
+            <svg class="fill-current h-5 w-5" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                <path d="M0 3h20v2H0V3zm0 5h20v2H0V8zm0 5h20v2H0v-2z" />
+            </svg>
+        </button>
+
+        <!-- Navigation Menu -->
+        <nav id="nav-menu" class="hidden md:flex space-x-6">
+            <a href="#" class="text-gray-900 dark:text-gray-100 hover:text-fuchsia-700 dark:hover:text-fuchsia-500 transition duration-300 ease-in-out text-xl">Home</a>
+            <a href="#" class="text-gray-900 dark:text-gray-100 hover:text-fuchsia-700 dark:hover:text-fuchsia-500 transition duration-300 ease-in-out text-xl">Process</a>
+            <a href="#" class="text-gray-900 dark:text-gray-100 hover:text-fuchsia-700 dark:hover:text-fuchsia-500 transition duration-300 ease-in-out text-xl">Revive</a>
+            <a href="#" class="text-gray-900 dark:text-gray-100 hover:text-fuchsia-700 dark:hover:text-fuchsia-500 transition duration-300 ease-in-out text-xl">More-Tools</a>
+            <a href="#" class="text-gray-900 dark:text-gray-100 hover:text-fuchsia-700 dark:hover:text-fuchsia-500 transition duration-300 ease-in-out text-xl">Plans</a>
+            <a href="#" class="text-gray-900 dark:text-gray-100 hover:text-fuchsia-700 dark:hover:text-fuchsia-500 transition duration-300 ease-in-out text-xl">FAQ</a>
+            <a href="#" class="text-gray-900 dark:text-gray-100 hover:text-fuchsia-700 dark:hover:text-fuchsia-500 transition duration-300 ease-in-out text-xl">Contact</a>
+        </nav>
+
+        <!-- Action Buttons for Desktop -->
+        <div class="hidden md:flex space-x-4">
+            <a href="login.html" class="text-fuchsia-700 border border-fuchsia-700 px-4 py-2 rounded-lg hover:bg-fuchsia-700 hover:text-white dark:hover:bg-fuchsia-500 transition duration-300 ease-in-out">Log in</a>
+            <a href="signup.html" class="bg-fuchsia-700 text-white px-4 py-2 rounded-lg hover:scale-105 hover:bg-fuchsia-800 dark:hover:bg-fuchsia-500 transition duration-300 ease-in-out">Sign Up</a>
+        </div>
+
+        <!-- Mobile Menu (Hidden by Default) -->
+        <div id="mobile-menu" class="md:hidden hidden flex flex-col items-center mt-4 space-y-4">
+            <a href="#" class="text-gray-700 dark:text-gray-100 hover:text-fuchsia-700 dark:hover:text-fuchsia-500 transition duration-300 ease-in-out">Home</a>
+            <a href="#" class="text-gray-700 dark:text-gray-100 hover:text-fuchsia-700 dark:hover:text-fuchsia-500 transition duration-300 ease-in-out">Explore Tools</a>
+            <a href="#" class="text-gray-700 dark:text-gray-100 hover:text-fuchsia-700 dark:hover:text-fuchsia-500 transition duration-300 ease-in-out">Pricing</a>
+            <a href="#" class="text-gray-700 dark:text-gray-100 hover:text-fuchsia-700 dark:hover:text-fuchsia-500 transition duration-300 ease-in-out">FAQ</a>
+            <a href="#" class="text-gray-700 dark:text-gray-100 hover:text-fuchsia-700 dark:hover:text-fuchsia-500 transition duration-300 ease-in-out">Contact</a>
+
+            <!-- Adjusted buttons -->
+            <button class="text-fuchsia-700 border border-fuchsia-700 px-3 py-1 md:px-4 md:py-2 rounded-lg hover:bg-fuchsia-700 hover:text-white dark:hover:bg-fuchsia-500 transition duration-300 ease-in-out">
+                Log in
+            </button>
+            <button class="bg-fuchsia-700 text-white px-3 py-1 md:px-4 md:py-2 rounded-lg hover:scale-105 hover:bg-fuchsia-800 dark:hover:bg-fuchsia-500 transition duration-300 ease-in-out">
+                Sign Up
+            </button>
+        </div>
+    </div>
+</header>
+
+<!-- Hero Section -->
+<section class="bg-gray-100 py-12 fade-in">
+    <div class="container mx-auto flex flex-col xl:flex-row xl:items-center">
+        <!-- Left Text Section -->
+        <div class="w-full xl:w-1/2 xl:pr-12 text-center xl:text-left">
+            <h2 class="text-4xl font-bold mb-4">Restore Old Photos Online To Make Memories Alive</h2>
+            <p class="text-gray-800 text-2xl  mb-6 mx-6 xl:mx-0">
+                PhotoRevive helps automatically restore old photos online in JPG, JPEG, PNG, BMP, WEBP, and more. Your old images can be instantly restored online by removing scratches, tears, spots, dust, and sepia.
+            </p>
+            <button id="scrollToUpload" class=" bg-gradient-to-r from-fuchsia-700 via-fuchsia-600 to-pink-600 text-xl text-white px-6 py-3 rounded-lg hover:scale-105 transition duration-300 ease-in-out">
+                Get Started
+            </button>
+        </div>
+        <!-- Right Image Section -->
+        <div class= " w-full xl:w-1/2 xl:pl-12 flex justify-center xl:justify-end">
+            <img src="./assets/images/main.webp" alt="Old Photo Example" class="hidden xl:block rounded-lg shadow-lg w-3/4 h-auto object-cover hover:scale-110 transition-transform duration-500">
+        </div>
+    </div>
+</section>
+
+<!-- Revive Process Section -->
+<section class="bg-white py-12 fade-in">
+    <div class="container mx-auto text-center">
+        <h3 class="text-4xl font-bold mb-4">Revive Process</h3>
+        <p class="text-2xl mt-2 text-gray-600 mb-8">
+            Our photo Revive is quick, easy, and free to use. Just follow these three steps to bring your photo back to life in no time.
+        </p>
+        
+        <!-- Flexbox Layout for the Cards -->
+        <div class="flex flex-col sm:flex-row sm:justify-center gap-6 sm:gap-8 mt-12">
+            
+            <!-- Card 1 -->
+            <div class="bg-gradient-to-b from-fuchsia-700 via-fuchsia-600 to-pink-600 p-6 text-white  transition-transform transform hover:scale-105w-full sm:w-80 rounded-3xl hover:shadow-xl hover:scale-105 transition duration-300 ease-in-out flex flex-col items-center text-center">
+                <i class="fas fa-upload fa-3x mb-4"></i> <!-- Upload Icon -->
+                <h4 class="font-bold text-xl mb-4">Step 1: Upload Image</h4>
+                <p class="text-xl sm:text-base ">Upload the image you want to revive from your computer or mobile device.</p>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="bg-gradient-to-b from-fuchsia-700 via-fuchsia-600 to-pink-600 p-6 text-white w-full sm:w-80 rounded-3xl hover:shadow-xl hover:scale-105 transition duration-300 ease-in-out flex flex-col items-center text-center">
+                <i class="fas fa-magic fa-3x mb-4"></i> <!-- Magic/Revive Icon -->
+                <h4 class="font-bold text-xl mb-4">Step 2: Revive Image</h4>
+                <p class="text-xl sm:text-base">Our AI will process the image to remove imperfections and restore its former glory.</p>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="bg-gradient-to-b from-fuchsia-700 via-fuchsia-600 to-pink-600 p-6 text-white w-full sm:w-80 rounded-3xl hover:shadow-xl hover:scale-105 transition duration-300 ease-in-out flex flex-col items-center text-center">
+                <i class="fas fa-download fa-3x mb-4"></i> <!-- Download Icon -->
+                <h4 class="font-bold text-xl mb-4">Step 3: Download Result</h4>
+                <p class="text-xl sm:text-base">Download your restored photo and enjoy the revived memories.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+<!-- Revive Process Section -->
+<section id="upload-section" class="bg-white py-12 fade-in">
+    <div class="container mx-auto text-center">
+        <!-- Heading and Paragraph -->
+        <h3 class="text-4xl font-bold mb-4">Revive Your Photo</h3>
+        <p class="mt-2 text-2xl text-gray-600 mb-8">
+            Post your photo here. Within a few seconds, you will get your photo after removing all the scratches and brown spots.
+        </p>
+
+<!-- New Upload Section -->
+<section id="upload-section" class="w-full lg:w-[70%] xl:w-[60%] 2xl:w-[60%] min-h-[55vh]  mx-auto mb-20 flex flex-col justify-center items-center bg-white rounded-3xl border-4 border-dashed border-fuchsia-400  p-2 md:p-6">
+    <img src="./assets/icons/uploadicon.jpg" alt="Upload Image Preview" class="w-32 h-32 md:w-40 md:h-40 mb-3 md:mb-5">
+    <h3 class="text-base md:text-lg mb-1 md:mb-2 text-gray-900">Old / Scratched Photo</h3>
+    <p class="text-sm md:text-base text-gray-600">Drag and drop your image here to upload</p>
+    <label class="text-xl bg-gradient-to-r from-fuchsia-700 via-fuchsia-600 to-pink-600 text-white px-6 py-3 mt-6 rounded-lg hover:scale-105 transition duration-300 ease-in-out">
+        <input type="file" id="file-input" class="hidden">
+        Upload Image
+    </label>
+    <p class="text-sm md:text-base text-gray-600 mt-5 md:mt-7">or drop it here</p>
+</section>
+<section id="explore-tools" class="py-12 bg-gray-100">
+    <div class="container mx-auto px-6">
+        <h2 class="text-4xl font-bold text-center mb-8 ">Explore More Tools</h2>
+        <p class="text-center mb-12 text-gray-600 text-2xl ">Discover a variety of online tools to enhance your photos and videos easily with AI technology.</p>
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
+            <!-- Card 1 -->
+            <div class="bg-white p-6 rounded-lg shadow-lg transform transition-transform duration-300 hover:scale-105 hover:shadow-xl hover:shadow-fuchsia-100">
+                <div class="flex items-center justify-center mb-4 text-4xl text-fuchsia-600">
+                    <i class="fas fa-image"></i>
+                </div>
+                <h3 class="text-xl font-semibold mb-2">Remove Image Background</h3>
+                <p class="text-gray-600 mb-4">Easily remove the background from images with just a few clicks.</p>
+                <a href="/remove-background" class="text-fuchsia-600 hover:underline">Explore Tool</a>
+            </div>
+            <!-- Card 3 -->
+            <div class="bg-white p-6 rounded-lg shadow-lg transform transition-transform duration-300 hover:scale-105 hover:shadow-xl hover:shadow-fuchsia-100">
+                <div class="flex items-center justify-center mb-4 text-4xl text-fuchsia-600">
+                    <i class="fas fa-file-image"></i>
+                </div>
+                <h3 class="text-xl font-semibold mb-2">GIF to PNG</h3>
+                <p class="text-gray-600 mb-4">Convert GIF files to PNG format effortlessly.</p>
+                <a href="/gif-to-png" class="text-fuchsia-600 hover:underline">Explore Tool</a>
+            </div>
+            <!-- Card 4 -->
+            <div class="bg-white p-6 rounded-lg shadow-lg transform transition-transform duration-300 hover:scale-105 hover:shadow-xl hover:shadow-fuchsia-100">
+                <div class="flex items-center justify-center mb-4 text-4xl text-fuchsia-600">
+                    <i class="fas fa-image"></i>
+                </div>
+                <h3 class="text-xl font-semibold mb-2">PNG to JPG</h3>
+                <p class="text-gray-600 mb-4">Convert PNG files to JPG format easily.</p>
+                <a href="/png-to-jpg" class="text-fuchsia-600 hover:underline">Explore Tool</a>
+            </div>
+            <!-- Card 5 -->
+            <div class="bg-white p-6 rounded-lg shadow-lg transform transition-transform duration-300 hover:scale-105 hover:shadow-xl hover:shadow-fuchsia-100">
+                <div class="flex items-center justify-center mb-4 text-4xl text-fuchsia-600">
+                    <i class="fab fa-tiktok"></i>
+                </div>
+                <h3 class="text-xl font-semibold mb-2">Remove TikTok Watermark</h3>
+                <p class="text-gray-600 mb-4">Remove TikTok video watermarks in a snap.</p>
+                <a href="/remove-tiktok-watermark" class="text-fuchsia-600 hover:underline">Explore Tool</a>
+            </div>
+            <!-- Card 6 -->
+            <div class="bg-white p-6 rounded-lg shadow-lg transform transition-transform duration-300 hover:scale-105 hover:shadow-xl hover:shadow-fuchsia-100">
+                <div class="flex items-center justify-center mb-4 text-4xl text-fuchsia-600">
+                    <i class="fas fa-video"></i>
+                </div>
+                <h3 class="text-xl font-semibold mb-2">Remove Video Watermark</h3>
+                <p class="text-gray-600 mb-4">Easily remove watermarks from videos.</p>
+                <a href="/remove-video-watermark" class="text-fuchsia-600 hover:underline">Explore Tool</a>
+            </div>
+            <!-- Card 7 -->
+            <div class="bg-white p-6 rounded-lg shadow-lg transform transition-transform duration-300 hover:scale-105 hover:shadow-xl hover:shadow-fuchsia-100">
+                <div class="flex items-center justify-center mb-4 text-4xl text-fuchsia-600">
+                    <i class="fas fa-crop"></i>
+                </div>
+                <h3 class="text-xl font-semibold mb-2">Crop Images</h3>
+                <p class="text-gray-600 mb-4">Crop images to the size you need.</p>
+                <a href="/crop-images" class="text-fuchsia-600 hover:underline">Explore Tool</a>
+            </div>
+            <!-- Card 8 -->
+            <div class="bg-white p-6 rounded-lg shadow-lg transform transition-transform duration-300 hover:scale-105 hover:shadow-xl hover:shadow-fuchsia-100">
+                <div class="flex items-center justify-center mb-4 text-4xl text-fuchsia-600">
+                    <i class="fas fa-rotate"></i>
+                </div>
+                <h3 class="text-xl font-semibold mb-2">Rotate Images</h3>
+                <p class="text-gray-600 mb-4">Rotate images to any angle.</p>
+                <a href="/rotate-images" class="text-fuchsia-600 hover:underline">Explore Tool</a>
+            </div>
+            <!-- Card 9 -->
+            <div class="bg-white p-6 rounded-lg shadow-lg transform transition-transform duration-300 hover:scale-105 hover:shadow-xl hover:shadow-fuchsia-100">
+                <div class="flex items-center justify-center mb-4 text-4xl text-fuchsia-600">
+                    <i class="fas fa-compress-alt"></i>
+                </div>
+                <h3 class="text-xl font-semibold mb-2">Compress Images</h3>
+                <p class="text-gray-600 mb-4">Compress images without losing quality.</p>
+                <a href="/compress-images" class="text-fuchsia-600 hover:underline">Explore Tool</a>
+            </div>
+            <!-- Card 10 -->
+            <div class="bg-white p-6 rounded-lg shadow-lg transform transition-transform duration-300 hover:scale-105 hover:shadow-xl hover:shadow-fuchsia-100">
+                <div class="flex items-center justify-center mb-4 text-4xl text-fuchsia-600">
+                    <i class="fas fa-dice-d20"></i>
+                </div>
+                <h3 class="text-xl font-semibold mb-2">Add Filters</h3>
+                <p class="text-gray-600 mb-4">Apply various filters to enhance your images.</p>
+                <a href="/add-filters" class="text-fuchsia-600 hover:underline">Explore Tool</a>
+            </div>
+            <!-- Card 11 -->
+            <div class="bg-white p-6 rounded-lg shadow-lg transform transition-transform duration-300 hover:scale-105 hover:shadow-xl hover:shadow-fuchsia-100">
+                <div class="flex items-center justify-center mb-4 text-4xl text-fuchsia-600">
+                    <i class="fas fa-paint-brush"></i>
+                </div>
+                <h3 class="text-xl font-semibold mb-2">Adjust Colors</h3>
+                <p class="text-gray-600 mb-4">Adjust colors and brightness of your images.</p>
+                <a href="/adjust-colors" class="text-fuchsia-600 hover:underline">Explore Tool</a>
+            </div>
+            <!-- Card 12 -->
+            <div class="bg-white p-6 rounded-lg shadow-lg transform transition-transform duration-300 hover:scale-105 hover:shadow-xl hover:shadow-fuchsia-100">
+                <div class="flex items-center justify-center mb-4 text-4xl text-fuchsia-600">
+                    <i class="fas fa-tachometer-alt"></i>
+                </div>
+                <h3 class="text-xl font-semibold mb-2">Resize Images</h3>
+                <p class="text-gray-600 mb-4">Resize images to your desired dimensions.</p>
+                <a href="/resize-images" class="text-fuchsia-600 hover:underline">Explore Tool</a>
+            </div>
+            <!-- Card 13 -->
+            <div class="bg-white p-6 rounded-lg shadow-lg transform transition-transform duration-300 hover:scale-105 hover:shadow-xl hover:shadow-fuchsia-100">
+                <div class="flex items-center justify-center mb-4 text-4xl text-fuchsia-600">
+                    <i class="fas fa-undo-alt"></i>
+                </div>
+                <h3 class="text-xl font-semibold mb-2">Undo Changes</h3>
+                <p class="text-gray-600 mb-4">Undo changes made to your images easily.</p>
+                <a href="/undo-changes" class="text-fuchsia-600 hover:underline">Explore Tool</a>
+            </div>
+            <!-- Card 14 -->
+            <div class="bg-white p-6 rounded-lg shadow-lg transform transition-transform duration-300 hover:scale-105 hover:shadow-xl hover:shadow-fuchsia-100">
+                <div class="flex items-center justify-center mb-4 text-4xl text-fuchsia-600">
+                    <i class="fas fa-adjust"></i>
+                </div>
+                <h3 class="text-xl font-semibold mb-2">Adjust Brightness</h3>
+                <p class="text-gray-600 mb-4">Adjust the brightness of your images.</p>
+                <a href="/adjust-brightness" class="text-fuchsia-600 hover:underline">Explore Tool</a>
+            </div>
+
+            <!-- Card 18 -->
+            <div class="bg-white p-6 rounded-lg shadow-lg transform transition-transform duration-300 hover:scale-105 hover:shadow-xl hover:shadow-fuchsia-100">
+                <div class="flex items-center justify-center mb-4 text-4xl text-fuchsia-600">
+                    <i class="fas fa-file-alt"></i>
+                </div>
+                <h3 class="text-xl font-semibold mb-2">Convert PDF to Image</h3>
+                <p class="text-gray-600 mb-4">Convert PDF pages to image formats.</p>
+                <a href="/pdf-to-image" class="text-fuchsia-600 hover:underline">Explore Tool</a>
+            </div>
+
+            <!-- Card 21 -->
+            <div class="bg-white p-6 rounded-lg shadow-lg transform transition-transform duration-300 hover:scale-105 hover:shadow-xl hover:shadow-fuchsia-100">
+                <div class="flex items-center justify-center mb-4 text-4xl text-fuchsia-600">
+                    <i class="fas fa-download"></i>
+                </div>
+                <h3 class="text-xl font-semibold mb-2">Download YouTube Videos</h3>
+                <p class="text-gray-600 mb-4">Download videos from YouTube easily.</p>
+                <a href="/download-youtube-videos" class="text-fuchsia-600 hover:underline">Explore Tool</a>
+            </div>
+</section>
+
+<!-- Start Pricing Plans Section -->
+<section id="pricing" class="py-16 bg-gray-100">
+    <div class="container mx-auto px-4">
+        <h2 class="text-4xl font-bold text-center text-gray-800 mb-8">Pricing Plans</h2>
+        <div class="grid gap-8 md:grid-cols-3">
+            <!-- Basic Plan -->
+            <div class="bg-white p-6 rounded-lg shadow-lg text-center transition-transform transform hover:scale-105 hover:bg-gradient-to-b hover:from-fuchsia-700 hover:via-fuchsia-600 hover:to-pink-600 hover:text-white flex flex-col justify-between">
+                <div>
+                    <h3 class="text-xl font-semibold mb-4">Basic Plan</h3>
+                    <p class="text-2xl font-bold mb-4">Free</p>
+                    <ul class="mb-6 text-left">
+                        <li class="mb-2">Restore up to 10 photos only</li>
+                        <li class="mb-2">Basic restoration tools</li>
+                        <li>Watermarked output</li>
+                    </ul>
+                </div>
+                <a href="/get-started" class="inline-block bg-white text-fuchsia-600 py-2 px-4 rounded-lg hover:bg-fuchsia-700 hover:text-white transition duration-300">Get Started</a>
+            </div>
+            <!-- Premium Plan -->
+            <div class="bg-white p-6 rounded-lg shadow-lg text-center transition-transform transform hover:scale-105 hover:bg-gradient-to-b hover:from-fuchsia-700 hover:via-fuchsia-600 hover:to-pink-600 hover:text-white flex flex-col justify-between">
+                <div>
+                    <h3 class="text-xl font-semibold mb-4">Premium Plan</h3>
+                    <p class="text-2xl font-bold mb-4">$9.99/month</p>
+                    <ul class="mb-6 text-left">
+                        <li class="mb-2">Restore unlimited photos</li>
+                        <li class="mb-2">Advanced restoration tools</li>
+                        <li class="mb-2">No watermarks</li>
+                        <li>Priority support</li>
+                    </ul>
+                </div>
+                <a href="/subscribe" class="inline-block bg-white text-fuchsia-600 py-2 px-4 rounded-lg hover:bg-fuchsia-700 hover:text-white transition duration-300">Subscribe</a>
+            </div>
+            <!-- Pro Plan -->
+            <div class="bg-white p-6 rounded-lg shadow-lg text-center transition-transform transform hover:scale-105 hover:bg-gradient-to-b hover:from-fuchsia-700 hover:via-fuchsia-600 hover:to-pink-600 hover:text-white flex flex-col justify-between">
+                <div>
+                    <h3 class="text-xl font-semibold mb-4">Pro Plan</h3>
+                    <p class="text-2xl font-bold mb-4">$19.99/month</p>
+                    <ul class="mb-6 text-left">
+                        <li class="mb-2">Restore unlimited photos</li>
+                        <li class="mb-2">Premium restoration tools</li>
+                        <li class="mb-2">No watermarks</li>
+                        <li class="mb-2">24/7 support</li>
+                        <li>Exclusive features</li>
+                    </ul>
+                </div>
+                <a href="/subscribe" class="inline-block bg-white text-fuchsia-600 py-2 px-4 rounded-lg hover:bg-fuchsia-700 hover:text-white transition duration-300">Subscribe</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- End Pricing Plans Section  -->
+
+
+<!-- Start FAQ Section  -->
+<!-- FAQ Section -->
+<section id="faq" class="py-12 bg-gray-100">
+    <div class="container mx-auto px-6">
+        <h2 class="text-3xl font-bold text-center mb-8">Frequently Asked Questions</h2>
+        <div class="space-y-4">
+            <!-- FAQ Item 1 -->
+            <div class="faq-item bg-white p-6 rounded-lg shadow-md transition-all duration-300 ease-in-out">
+                <button class="w-full text-left text-xl font-semibold flex items-center justify-between faq-question">
+                    <span>What is PhotoRevive?</span>
+                    <svg class="w-6 h-6 transform transition-transform duration-300 ease-in-out faq-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                    </svg>
+                </button>
+                <div class="faq-answer hidden mt-4 text-gray-600">
+                    <p>PhotoRevive is an AI-powered online tool that restores old photos by removing scratches, tears, spots, dust, and sepia.</p>
+                </div>
+            </div>
+
+            <!-- FAQ Item 2 -->
+            <div class="faq-item bg-white p-6 rounded-lg shadow-md transition-all duration-300 ease-in-out">
+                <button class="w-full text-left text-xl font-semibold flex items-center justify-between faq-question">
+                    <span>How does the restoration process work?</span>
+                    <svg class="w-6 h-6 transform transition-transform duration-300 ease-in-out faq-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                    </svg>
+                </button>
+                <div class="faq-answer hidden mt-4 text-gray-600">
+                    <p>Our AI analyzes your photo and applies advanced restoration algorithms to enhance and rejuvenate the image.</p>
+                </div>
+            </div>
+
+            <!-- FAQ Item 3 -->
+            <div class="faq-item bg-white p-6 rounded-lg shadow-md transition-all duration-300 ease-in-out">
+                <button class="w-full text-left text-xl font-semibold flex items-center justify-between faq-question">
+                    <span>What formats are supported?</span>
+                    <svg class="w-6 h-6 transform transition-transform duration-300 ease-in-out faq-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                    </svg>
+                </button>
+                <div class="faq-answer hidden mt-4 text-gray-600">
+                    <p>We support various formats including JPG, JPEG, PNG, BMP, and WEBP.</p>
+                </div>
+            </div>
+
+            <!-- FAQ Item 4 -->
+            <div class="faq-item bg-white p-6 rounded-lg shadow-md transition-all duration-300 ease-in-out">
+                <button class="w-full text-left text-xl font-semibold flex items-center justify-between faq-question">
+                    <span>Is there a free trial available?</span>
+                    <svg class="w-6 h-6 transform transition-transform duration-300 ease-in-out faq-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                    </svg>
+                </button>
+                <div class="faq-answer hidden mt-4 text-gray-600">
+                    <p>Yes, our Basic Plan offers a free tier with limited features. You can upgrade to our Premium or Pro Plan for additional benefits.</p>
+                </div>
+            </div>
+
+            <!-- FAQ Item 5 -->
+            <div class="faq-item bg-white p-6 rounded-lg shadow-md transition-all duration-300 ease-in-out">
+                <button class="w-full text-left text-xl font-semibold flex items-center justify-between faq-question">
+                    <span>How can I contact support?</span>
+                    <svg class="w-6 h-6 transform transition-transform duration-300 ease-in-out faq-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                    </svg>
+                </button>
+                <div class="faq-answer hidden mt-4 text-gray-600">
+                    <p>You can contact our support team via the Contact page on our website or send us an email at support@photorevive.com.</p>
+                </div>
+            </div>
+
+            <!-- Additional FAQ Items Hidden Initially -->
+            <div id="more-faqs" class="space-y-4 hidden">
+                <!-- FAQ Item 6 -->
+                <div class="faq-item bg-white p-6 rounded-lg shadow-md transition-all duration-300 ease-in-out">
+                    <button class="w-full text-left text-xl font-semibold flex items-center justify-between faq-question">
+                        <span>Are there any file size limits?</span>
+                        <svg class="w-6 h-6 transform transition-transform duration-300 ease-in-out faq-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                        </svg>
+                    </button>
+                    <div class="faq-answer hidden mt-4 text-gray-600">
+                        <p>Yes, there are file size limits depending on your plan. Check the details in your account settings.</p>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 7 -->
+                <div class="faq-item bg-white p-6 rounded-lg shadow-md transition-all duration-300 ease-in-out">
+                    <button class="w-full text-left text-xl font-semibold flex items-center justify-between faq-question">
+                        <span>Can I restore multiple photos at once?</span>
+                        <svg class="w-6 h-6 transform transition-transform duration-300 ease-in-out faq-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                        </svg>
+                    </button>
+                    <div class="faq-answer hidden mt-4 text-gray-600">
+                        <p>Currently, the tool supports restoring one photo at a time. Batch processing may be available in future updates.</p>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 8 -->
+                <div class="faq-item bg-white p-6 rounded-lg shadow-md transition-all duration-300 ease-in-out">
+                    <button class="w-full text-left text-xl font-semibold flex items-center justify-between faq-question">
+                        <span>How long does the restoration take?</span>
+                        <svg class="w-6 h-6 transform transition-transform duration-300 ease-in-out faq-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                        </svg>
+                    </button>
+                    <div class="faq-answer hidden mt-4 text-gray-600">
+                        <p>The restoration time varies depending on the photo's complexity and size. Typically, it takes a few minutes to complete.</p>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 9 -->
+                <div class="faq-item bg-white p-6 rounded-lg shadow-md transition-all duration-300 ease-in-out">
+                    <button class="w-full text-left text-xl font-semibold flex items-center justify-between faq-question">
+                        <span>Are my photos private?</span>
+                        <svg class="w-6 h-6 transform transition-transform duration-300 ease-in-out faq-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                        </svg>
+                    </button>
+                    <div class="faq-answer hidden mt-4 text-gray-600">
+                        <p>Yes, your photos are processed securely and are not shared with third parties. Refer to our privacy policy for more details.</p>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 10 -->
+                <div class="faq-item bg-white p-6 rounded-lg shadow-md transition-all duration-300 ease-in-out">
+                    <button class="w-full text-left text-xl font-semibold flex items-center justify-between faq-question">
+                        <span>What should I do if I encounter issues?</span>
+                        <svg class="w-6 h-6 transform transition-transform duration-300 ease-in-out faq-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                        </svg>
+                    </button>
+                    <div class="faq-answer hidden mt-4 text-gray-600">
+                        <p>If you encounter any issues, please contact our support team for assistance or check our Help Center for troubleshooting guides.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Show More Button -->
+            <div class="text-center mt-6">
+                <button id="show-more" class="text-blue-500 font-semibold hover:underline">Show More</button>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- End FAQ  Section  -->
+
+
+
+
+<!-- Floating Button to Scroll to Top -->
+<button id="scroll-to-top" class="fixed bottom-5 right-5 bg-fuchsia-700 text-white p-4 rounded-full shadow-lg hover:bg-fuchsia-800 transition duration-300">
+    <i class="fas fa-arrow-up"></i>
+</button>
+
+
+
+
+
+<!-- Footer Section -->
+<footer class="bg-gradient-to-r from-fuchsia-900 via-fuchsia-800 to-pink-800 text-white py-6">
+    <div class="  ">
+        <p class="text-xl mb-4">© 2024 PhotoRevive. All Rights Reserved.</p>
+        <p class="text-lg">1234 Main Street, Anytown, USA</p>
+        <p class="text-lg">info@photorevive.com | +1 234-567-8901</p>
+        <div class="mt-4">
+            <a href="#" class="text-lg hover:underline">Privacy Policy</a> |
+            <a href="#" class="text-lg hover:underline">Terms of Service</a> |
+            <a href="#" class="text-lg hover:underline">Contact Us</a>
+        </div>
+    </div>
+</footer>
+
+
+
+
+<script src="script.js"></script>
+</body>
+</html>

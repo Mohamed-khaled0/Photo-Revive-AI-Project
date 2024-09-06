@@ -1,0 +1,77 @@
+
+body{
+box-sizing: border-box;
+margin: 0;
+padding: 0;
+
+}
+
+
+/* Start CSS For Login & Sigh up  Pages   */
+.input-group {
+    display: flex;
+    align-items: center;
+    border: 1px solid #e2e8f0; /* Light gray border */
+    border-radius: 0.375rem; /* Rounded corners */
+    position: relative;
+}
+.input-group input {
+    border: none;
+    outline: none;
+    padding-left: 2.5rem;
+    transition: border-color 0.3s ease; /* Smooth transition */
+}
+.input-group i {
+    position: absolute;
+    left: 0.75rem;
+    color: #4a5568; /* Gray color for icons */
+}
+.input-group input:focus {
+    border-color: #d946ef; /* Fuchsia color */
+    box-shadow: 0 0 0 2px rgba(217, 70, 239, 0.5); /* Optional subtle shadow effect */
+}
+::placeholder {
+    color: #a0aec0; /* Placeholder text color */
+}
+.bg-custom {
+    background-image: url('assets/images/pexels-moose-photos-170195-1037992.jpg'); /* Replace with your image URL */
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed; /* Optional: keeps the background image fixed when scrolling */
+    height: 100vh; /* Ensures the background covers the full viewport height */
+}
+.card {
+    background-color: rgba(255, 255, 255, 0.7); /* Semi-transparent white */
+}
+
+/* End CSS For Login & Sign up  Pages   */
+
+
+
+
+@keyframes pulse-grow {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+}
+
+@keyframes fade-in {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.hover-pulse:hover {
+    animation: pulse-grow 0.5s ease-in-out infinite;
+}
+
+.fade-in {
+    animation: fade-in 1s ease-in-out;
+}
+ 

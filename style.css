@@ -1,0 +1,42 @@
+html {
+    scroll-behavior: smooth;
+}
+
+/* Default light mode styles */
+body {
+    transition: background-color 0.3s, color 0.3s;
+}
+
+header {
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* Dark mode styles */
+.dark-mode {
+    background-color: #121212;
+    color: #e0e0e0;
+}
+
+.dark-mode header {
+    background-color: #1f1f1f;
+}
+
+.dark-mode .bg-white {
+    background-color: #2c2c2c;
+}
+
+.dark-mode .text-gray-900 {
+    color: #e0e0e0;
+}
+
+.dark-mode .text-gray-600 {
+    color: #b0b0b0;
+}
+
+.dark-mode .bg-blue-500 {
+    background-color: #1e40af;
+}
+
+.dark-mode .bg-blue-100 {
+    background-color: #334155;
+}

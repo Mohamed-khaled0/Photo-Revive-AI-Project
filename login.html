@@ -1,0 +1,46 @@
+<!-- login.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="main.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@3.3.0/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-custom flex items-center justify-center min-h-screen">
+
+    <div class="max-w-md w-full card shadow-lg rounded-lg p-8">
+        <h2 class="text-2xl font-semibold mb-6 text-center">Log <span class="text-fuchsia-500">In</span></h2>
+        <form action="login-process.php" method="POST">
+            <div class="mb-4 relative">
+                <label for="email" class="block text-gray-700 text-sm font-semibold mb-2">Email</label>
+                <div class="input-group">
+                    <i class="fas fa-envelope" aria-label="Email Icon"></i>
+                    <input type="email" id="email" name="email" placeholder="Your Email" required class="w-full border-none p-3 focus:outline-none rounded-lg">
+                </div>
+            </div>
+            <div class="mb-4 relative">
+                <label for="password" class="block text-gray-700 text-sm font-semibold mb-2">Password</label>
+                <div class="input-group">
+                    <i class="fas fa-lock" aria-label="Password Icon"></i>
+                    <input type="password" id="password" name="password" placeholder="Your Password" required class="w-full border-none p-3 focus:outline-none rounded-lg">
+                </div>
+            </div>
+            <div class="mb-4 flex items-center">
+                <input type="checkbox" id="remember" name="remember" class="h-4 w-4 text-blue-500 focus:ring-blue-500 border-gray-300 rounded">
+                <label for="remember" class="ml-2 text-gray-700 text-sm">Remember me</label>
+            </div>
+            <div class="text-center">
+                <button type="submit" class="bg-gradient-to-r from-fuchsia-700 via-fuchsia-600 to-pink-600 text-white px-6 py-3 rounded-lg hover:scale-105 transition duration-300 ease-in-out">Log In</button>
+            </div>
+        </form>
+        <p class="text-center text-gray-600 mt-4">
+            Don't have an account? <a href="signup.html" class="text-fuchsia-700 hover:underline">Sign up</a>
+        </p>
+    </div>
+
+</body>
+</html>
