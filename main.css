@@ -6,6 +6,11 @@ padding: 0;
 
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
+
 
 /* Start CSS For Login & Sigh up  Pages   */
 .input-group {
