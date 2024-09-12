@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="main.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta charset="UTF-8">
     <!-- Google Fonts -->
@@ -15,10 +15,10 @@
     <meta name="description" content="Effortlessly restore old photos with PhotoRevive's AI-powered tool - rejuvenate your cherished memories with just a few clicks!" />
 </head>
 
-<body class="font-sans bg-gray-50 text-gray-900">
+<body class="font-sans bg-cover bg-center bg-fixed bg-no-repeat text-gray-900" style="background-image: url('assets/images/background.jpg');">
 
 <!-- Header -->
-<header class="bg-white py-4 shadow-2xl fade-in dark:bg-gray-900 dark:text-white transition duration-300">
+<header class=" py-4 shadow-md fade-in dark:bg-gray-900 dark:text-white transition duration-300">
     <div class="container mx-auto flex justify-between items-center px-6">
         <!-- Logo -->
         <h1 class="text-3xl font-bold">Photo<span class="text-fuchsia-800 dark:text-fuchsia-500">Revive</span></h1>
@@ -67,7 +67,7 @@
 </header>
 
 <!-- Hero Section -->
-<section class="bg-gray-100 py-12 fade-in">
+<section class=" py-12 fade-in">
     <div class="container mx-auto flex flex-col xl:flex-row xl:items-center">
         <!-- Left Text Section -->
         <div class="w-full xl:w-1/2 xl:pr-12 text-center xl:text-left">
@@ -87,7 +87,7 @@
 </section>
 
 <!-- Revive Process Section -->
-<section class="bg-white py-12 fade-in">
+<section class=" py-12 fade-in">
     <div class="container mx-auto text-center">
         <h3 class="text-4xl font-bold mb-4">Revive Process</h3>
         <p class="text-2xl mt-2 text-gray-600 mb-8">
@@ -124,7 +124,7 @@
 
 
 <!-- Revive Process Section -->
-<section id="upload-section" class="bg-white py-12 fade-in">
+<section id="upload-section" class="py-12 fade-in">
     <div class="container mx-auto text-center">
         <!-- Heading and Paragraph -->
         <h3 class="text-4xl font-bold mb-4">Revive Your Photo</h3>
@@ -143,7 +143,7 @@
     </label>
     <p class="text-sm md:text-base text-gray-600 mt-5 md:mt-7">or drop it here</p>
 </section>
-<section id="explore-tools" class="py-12 bg-gray-100">
+<section id="explore-tools" class="py-12 ">
     <div class="container mx-auto px-6">
         <h2 class="text-4xl font-bold text-center mb-8 ">Explore More Tools</h2>
         <p class="text-center mb-12 text-gray-600 text-2xl ">Discover a variety of online tools to enhance your photos and videos easily with AI technology.</p>
@@ -288,12 +288,12 @@
 </section>
 
 <!-- Start Pricing Plans Section -->
-<section id="pricing" class="py-16 bg-gray-100">
+<section id="pricing" class="py-16">
     <div class="container mx-auto px-4">
         <h2 class="text-4xl font-bold text-center text-gray-800 mb-8">Pricing Plans</h2>
         <div class="grid gap-8 md:grid-cols-3">
             <!-- Basic Plan -->
-            <div class="bg-white p-6 rounded-lg shadow-lg text-center duration-500  transition-transform transform hover:scale-105 hover:bg-gradient-to-tl hover:from-fuchsia-700 hover:via-fuchsia-600 hover:to-pink-600 hover:text-white flex flex-col justify-between">
+            <div class="bg-white p-6 rounded-lg shadow-xl transform transition-transform duration-300 hover:scale-105 hover:shadow-xl hover:shadow-fuchsia-100 flex flex-col justify-between">
                 <div>
                     <h3 class="text-xl font-semibold mb-4">Basic Plan</h3>
                     <p class="text-2xl font-bold mb-4">Free</p>
@@ -306,7 +306,7 @@
                 <a href="/get-started" class="inline-block bg-white text-fuchsia-600 py-2 px-4 rounded-lg hover:bg-fuchsia-700 hover:text-white transition duration-300">Get Started</a>
             </div>
             <!-- Premium Plan -->
-            <div class="bg-white p-6 rounded-lg shadow-lg text-center  duration-500 transition-transform transform hover:scale-105 hover:bg-gradient-to-tl hover:from-fuchsia-700 hover:via-fuchsia-600 hover:to-pink-600 hover:text-white flex flex-col justify-between">
+            <div class=" bg-white p-6 rounded-lg shadow-xl transform transition-transform duration-300 hover:scale-105 hover:shadow-xl hover:shadow-fuchsia-100 flex flex-col justify-between">
                 <div>
                     <h3 class="text-xl font-semibold mb-4">Premium Plan</h3>
                     <p class="text-2xl font-bold mb-4">$9.99/month</p>
@@ -320,7 +320,7 @@
                 <a href="/subscribe" class="inline-block bg-white text-fuchsia-600 py-2 px-4 rounded-lg  hover:bg-fuchsia-700 hover:text-white transition duration-300">Subscribe</a>
             </div>
             <!-- Pro Plan -->
-            <div class="bg-white p-6 rounded-lg shadow-lg text-center transition-transform   duration-500 transform hover:scale-105 hover:bg-gradient-to-tl hover:from-fuchsia-700 hover:via-fuchsia-600 hover:to-pink-600 hover:text-white hover:shadow-xl flex flex-col justify-between">
+            <div class=" bg-white p-6 rounded-lg shadow-xl transform transition-transform duration-300 hover:scale-105 hover:shadow-xl hover:shadow-fuchsia-100 flex flex-col justify-between">
                 <div> 
                     <h3 class="text-xl font-semibold mb-4">Pro Plan</h3>
                     <p class="text-2xl font-bold mb-4">$19.99/month</p>
@@ -343,7 +343,7 @@
 
 <!-- Start FAQ Section  -->
 <!-- FAQ Section -->
-<section id="faq" class="py-12 bg-gray-100">
+<section id="faq" class="py-12">
     <div class="container mx-auto px-6">
         <h2 class="text-3xl font-bold text-center mb-8">Frequently Asked Questions</h2>
         <div class="space-y-4">

@@ -64,7 +64,7 @@ const scrollToTopButton = document.getElementById('scroll-to-top');
 // Show or hide the button depending on scroll position
 window.addEventListener('scroll', function() {
     // Show the button if the user scrolls down 100 pixels or more
-    if (window.scrollY > 100) {
+    if (window.scrollY >= 100) {
         scrollToTopButton.style.display = 'block';
     } else {
         // Hide the button if near the top of the page
@@ -74,5 +74,7 @@ window.addEventListener('scroll', function() {
 
 // Scroll to the top when the button is clicked
 scrollToTopButton.addEventListener('click', function() {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+    window.scrollTo({ 
+        top: 0,
+        behavior: 'smooth' });
 });
